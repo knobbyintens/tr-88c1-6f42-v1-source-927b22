@@ -1,0 +1,7 @@
+\section{Method}
+Let $I\in\mathbb{R}^{H\times W\times 3}$ denote the low-light input. A lightweight
+illumination estimator predicts a single-channel illumination field
+$\hat{L}$; a Retinex decomposition yields the reflectance component
+$R = I / \max(\hat{L}, \epsilon)$. The gated fusion module combines $\hat{L}$,
+$R$ and a chroma residual branch with learned channel gates, and a
+chroma-preservation loss penalises hue drift in CIELAB space.
